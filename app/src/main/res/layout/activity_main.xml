@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.dormiot.kevnot.dormiot.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+  <HorizontalScrollView
+    android:id="@+id/horizontalScrollView"
+    android:layout_width="257dp"
+    android:layout_height="90dp"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="1dp">
+
+    <LinearLayout
+      android:id="@+id/linearLayout"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_marginLeft="8dp"
+      android:layout_marginStart="8dp"
+      android:orientation="horizontal"
+      app:layout_constraintLeft_toLeftOf="parent"
+      tools:layout_editor_absoluteY="0dp">
+
+      <Button
+        android:id="@+id/flow_color_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="#0f0"
+        android:padding="10dp"
+        android:text="Flow"
+        android:elevation="10dp"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+      <Button
+        android:id="@+id/single_color_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="#00f"
+        android:padding="10dp"
+        android:elevation="10dp"
+        android:text="Single"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+      <Button
+        android:id="@+id/stripSlider_color_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="#00f"
+        android:padding="10dp"
+        android:elevation="10dp"
+        android:text="Slider"
+        android:textColor="#fff"
+        android:textSize="20sp"/>
+
+      <Button
+        android:id="@+id/audio_color_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="#ff0"
+        android:padding="10dp"
+        android:text="AudioColor"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+    </LinearLayout>
+  </HorizontalScrollView>
+
+  <ToggleButton
+    android:id="@+id/led_status_button"
+    android:layout_width="wrap_content"
+    android:layout_height="48dp"
+    android:layout_alignParentEnd="true"
+    android:layout_alignTop="@+id/led_status_text"
+    android:layout_marginEnd="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="25dp"
+    android:layout_weight="1"
+    android:text="ToggleButton"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <RelativeLayout
+    android:id="@+id/relativeLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="101dp"
+    android:background="@color/green_panel"
+    app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+    tools:layout_editor_absoluteX="8dp">
+
+    <EditText
+      android:id="@+id/minute_edit_text"
+      android:layout_width="65dp"
+      android:layout_height="wrap_content"
+      android:layout_alignBaseline="@+id/colon"
+      android:layout_alignBottom="@+id/colon"
+      android:layout_toEndOf="@+id/colon"
+      android:ems="10"
+      android:inputType="number"
+      android:text="45"
+      android:textAlignment="textStart"
+      android:textColor="@color/aqua_panel"
+      android:textSize="44dp" />
+
+    <EditText
+      android:id="@+id/hour_edit_text"
+      android:layout_width="60dp"
+      android:layout_height="wrap_content"
+      android:layout_alignBaseline="@+id/colon"
+      android:layout_alignBottom="@+id/colon"
+      android:layout_toStartOf="@+id/colon"
+      android:ems="10"
+      android:inputType="number"
+      android:text="1"
+      android:textAlignment="textEnd"
+      android:textColor="@color/aqua_panel"
+      android:textSize="44dp"
+      android:typeface="monospace" />
+
+    <EditText
+      android:id="@+id/colon"
+      android:layout_width="20dp"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="15dp"
+      android:ems="10"
+      android:inputType="textPersonName"
+      android:text=":"
+      android:textAlignment="center"
+      android:textSize="44dp" />
+
+  </RelativeLayout>
+
+  <RelativeLayout
+    android:id="@+id/color_picker_view"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
+    app:layout_constraintVertical_bias="0.642"
+    tools:layout_editor_absoluteX="987dp">
+
+    <RelativeLayout
+      android:id="@+id/color_picker_panel"
+      android:layout_width="300dp"
+      android:layout_height="200dp"
+      android:layout_above="@+id/red_seek_bar"
+      android:layout_alignParentStart="true"
+      android:layout_marginBottom="7dp"
+      android:layout_marginStart="18dp"
+      android:elevation="10dp">
+
+    </RelativeLayout>
+
+    <SeekBar
+      android:id="@+id/blue_seek_bar"
+      android:layout_width="390dp"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+      android:layout_marginBottom="12dp" />
+
+    <SeekBar
+      android:id="@+id/green_seek_bar"
+      android:layout_width="390dp"
+      android:layout_height="wrap_content"
+      android:layout_above="@+id/blue_seek_bar"
+      android:layout_alignStart="@+id/blue_seek_bar"
+      android:layout_marginBottom="15dp" />
+
+    <SeekBar
+      android:id="@+id/red_seek_bar"
+      android:layout_width="390dp"
+      android:layout_height="wrap_content"
+      android:layout_above="@+id/green_seek_bar"
+      android:layout_alignEnd="@+id/green_seek_bar"
+      android:layout_marginBottom="16dp" />
+
+    <TextView
+      android:id="@+id/red_value_text"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentTop="true"
+      android:layout_marginEnd="20dp"
+      android:layout_marginTop="56dp"
+      android:text="RED"
+      android:textColor="@color/red_panel"
+      android:textSize="16sp" />
+
+    <TextView
+      android:id="@+id/green_value_text"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignStart="@+id/red_value_text"
+      android:layout_below="@+id/red_value_text"
+      android:layout_marginTop="19dp"
+      android:text="GREEN"
+      android:textColor="@color/green_panel"
+      android:textSize="16sp" />
+
+    <TextView
+      android:id="@+id/blue_value_text"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignStart="@+id/green_value_text"
+      android:layout_below="@+id/green_value_text"
+      android:layout_marginTop="28dp"
+      android:text="BLUE"
+      android:textColor="@color/aqua_panel"
+      android:textSize="16sp" />
+  </RelativeLayout>
+
+  <RelativeLayout
+    android:id="@+id/strip_slider_view"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:visibility="gone"
+    android:layout_alignParentStart="true"
+    android:elevation="10dp"
+    tools:layout_editor_absoluteX="8dp"
+    tools:layout_editor_absoluteY="192dp">>
+
+  </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

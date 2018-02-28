@@ -8,12 +8,12 @@ LED_STATUS = ''
 currentLEDscript = ''
 
 config = {
-    "apiKey": "AIzaSyBagjPr_Gs6V_0C_PEC3AVdpwu28tZe2WM",
-    "authDomain": "dorm-iot-project.firebaseapp.com",
-    "databaseURL": "https://dorm-iot-project.firebaseio.com",
-    "projectId": "dorm-iot-project",
-    "storageBucket": "dorm-iot-project.appspot.com",
-    "messagingSenderId": "645669478585"
+    "apiKey": *Hidden*,
+    "authDomain": *Hidden*,
+    "databaseURL": *Hidden*,
+    "projectId": *Hidden*,
+    "storageBucket": *Hidden*,
+    "messagingSenderId": *Hidden*
 }
 
 firebase = pyrebase.initialize_app(config)
